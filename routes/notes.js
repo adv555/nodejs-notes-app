@@ -10,11 +10,13 @@ const {
   updateNoteById,
 } = require('../services/controllers')
 
+const { noteValidation, noteUpdateValidation } = require('../middlewares/validation')
+
 router.get('/stats', getNotesStats)
 router.get('/', getAllNotes)
-router.post('/', addNote)
+router.post('/', noteValidation, addNote)
 router.get('/:id', getNoteById)
-router.patch('/:id', updateNoteById)
+router.patch('/:id', noteUpdateValidation, updateNoteById)
 router.delete('/:id', removeNote)
 
 module.exports = router
