@@ -8,7 +8,7 @@ const {
   removeNote,
   getNotesStats,
   updateNoteById,
-} = require('../services/controllers')
+} = require('../controllers')
 
 const { noteValidation, noteUpdateValidation } = require('../middlewares/validation')
 

@@ -1,12 +1,11 @@
 const { customAlphabet } = require('nanoid/async')
 const nanoid = customAlphabet('1234567890', 10)
-const getAll = require('./getAll')
-const updateAll = require('./updateAll')
+
+const { getAll, updateAll } = require('../repositories')
 const getDateFromContent = require('../helpers/getDateFromContent')
 
-const add = async body => {
-  //   console.log('body123', body)
-  const { name, category, content } = body
+const add = async data => {
+  const { name, category, content } = data
 
   const newNote = {
     id: await nanoid(),
@@ -21,7 +20,7 @@ const add = async body => {
   notes.push(newNote)
 
   await updateAll(notes)
-  //   console.table(newNote)
+
   return newNote
 }
 

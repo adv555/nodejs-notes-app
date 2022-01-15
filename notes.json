@@ -69,10 +69,29 @@
 		"name": "Masha",
 		"created": "2022-01-15T13:35:22.503Z",
 		"category": "Task",
-		"content": "to do something... 20-02-2022",
+		"content": "to do something... 20-02-2022, 24-05-2022",
 		"date": [
-			"20-02-2022"
+			"20-02-2022",
+			"24-05-2022"
 		],
+		"archived": false
+	},
+	{
+		"id": "2097859166",
+		"name": "Nick",
+		"created": "2022-01-15T15:43:42.215Z",
+		"category": "Idea",
+		"content": "go to the pool",
+		"date": [],
+		"archived": true
+	},
+	{
+		"id": "2446189215",
+		"name": "Marina",
+		"created": "2022-01-15T15:50:57.305Z",
+		"category": "Task",
+		"content": "12345 вышел зайчик погулять",
+		"date": [],
 		"archived": false
 	}
 ]

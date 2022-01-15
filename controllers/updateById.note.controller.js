@@ -1,12 +1,11 @@
-const { updateById } = require('../../repositories')
+const { updateById } = require('../services')
 
 const updateNoteById = async (req, res, next) => {
   const { id } = req.params
-  //   console.log(req.body)
 
   try {
     const updatedNote = await updateById(id, req.body)
-    res.json({ status: 'success', message: 'note updated', data: { updatedNote } })
+    res.status(200).json({ status: 'success', message: 'note updated', data: { updatedNote } })
   } catch (error) {
     next(error)
   }

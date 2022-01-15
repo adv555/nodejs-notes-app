@@ -1,4 +1,4 @@
-const notesPath = require('./notesPath')
+const notesPath = require('./notes.path')
 const fs = require('fs').promises
 
 const getAll = async () => {
@@ -7,7 +7,7 @@ const getAll = async () => {
     const notes = await JSON.parse(data)
     return notes
   } catch (error) {
-    console.log('Error at getAll', error.message)
+    console.log('File read error', error.message)
     throw error.message
   }
 }

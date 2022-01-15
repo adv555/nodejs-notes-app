@@ -1,8 +1,6 @@
-const getAll = require('./getAll')
-const updateAll = require('./updateAll')
+const { getAll, updateAll } = require('../repositories')
 
 const removeById = async id => {
-  //   console.log(id)
   const notes = await getAll()
   const idx = notes.findIndex(note => note.id === id)
 

@@ -1,4 +1,4 @@
-const getAll = require('./getAll')
+const { getAll } = require('../repositories')
 
 const generateStats = async () => {
   const notes = await getAll()
@@ -6,7 +6,6 @@ const generateStats = async () => {
 
   notes.map(({ category, archived }) => {
     let idx = statistics.findIndex(stats => stats.category === category)
-    // console.log(idx)
 
     if (idx > -1) {
       statistics[idx].total++
@@ -15,10 +14,10 @@ const generateStats = async () => {
         statistics[idx].archived++
       }
     } else {
-      statistics.push({ category: category, total: 1, archived: archived ? 1 : 0 })
+      statistics.push({ category, total: 1, archived: archived ? 1 : 0 })
     }
   })
-  // console.log(statistics)
+
   return statistics
 }
 

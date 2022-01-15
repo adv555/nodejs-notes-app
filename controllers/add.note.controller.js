@@ -1,10 +1,9 @@
-const { add } = require('../../repositories')
+const { add } = require('../services')
 
 const addNote = async (req, res, next) => {
+  const body = req.body
   try {
-    // console.log('body', req.body)
-
-    const newNote = await add(req.body)
+    const newNote = await add(body)
     res.status(201).json({
       status: 'success',
       message: 'note added',

@@ -1,9 +1,7 @@
-const getAll = require('./getAll')
-const updateAll = require('./updateAll')
+const { getAll, updateAll } = require('../repositories')
 const getDateFromContent = require('../helpers/getDateFromContent')
 
 const updateById = async (id, body) => {
-  //   console.log('body123', body)
   const { name, category, content, archived } = body
   const notes = await getAll()
   const idx = notes.findIndex(note => note.id === id)
@@ -15,6 +13,7 @@ const updateById = async (id, body) => {
   !content ? notes[idx].date : (notes[idx].date = getDateFromContent(content))
 
   updateAll(notes)
+
   return notes[idx]
 }
 
