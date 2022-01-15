@@ -1,7 +1,7 @@
 # nodejs-notes-app
 
 NodeJS application that have few REST endpoints. Users can add, edit and remove notes, archive and
-unarchive them. Added [Joi](https://joi.dev/api/?v=17.5.0) validation for POST/PATCH
+unarchive them. Used [Joi](https://joi.dev/api/?v=17.5.0) validation for routes that receive data (POST/PATCH)
 
 List of endpoints:
 
