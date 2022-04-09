@@ -12,6 +12,7 @@
   "author": "adv555 <adv55577@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "cors": "2.8.5",
     "cross-env": "7.0.3",
     "dotenv": "^10.0.0",
@@ -19,7 +20,9 @@
     "http-errors": "^1.8.1",
     "joi": "^17.5.0",
     "morgan": "1.10.0",
-    "nanoid": "^3.1.30"
+    "nanoid": "^3.1.30",
+    "query-string": "^7.1.1",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
     "eslint": "7.19.0",
