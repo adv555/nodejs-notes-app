@@ -59,7 +59,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Note"
+                "$ref": "#/components/schemas/NewNote"
               }
             }
           },
@@ -236,12 +236,6 @@
   "components": {
     "schemas": {
       "Note": {
-        "required": [
-          "archived",
-          "category",
-          "id",
-          "name"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -279,6 +273,28 @@
             "type": "string",
             "format": "data-time",
             "example": "2016-08-29T09:12:33.001+0000"
+          }
+        }
+      },
+      "NewNote": {
+        "required": [
+          "category",
+          "content",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "New Feature"
+          },
+          "content": {
+            "type": "string",
+            "example": "deadline 05/06/2021"
+          },
+          "category": {
+            "type": "string",
+            "example": "Idea"
           }
         }
       },
